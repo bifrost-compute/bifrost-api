@@ -55,6 +55,9 @@ components:
           items:
             type: string
           type: array
+        require_scanned_environments:
+          description: 'Require every environment a spec references to carry a clean recorded scan verdict (#58): a reference to an environment whose `scan` is absent, pending or failed is refused (400); false = any published environment is referenceable.'
+          type: boolean
       type: object
     AllocationSpec:
       description: 'A project''s allocation within a pool (translates to a Kueue LocalQueue).
